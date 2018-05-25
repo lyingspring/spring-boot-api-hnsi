@@ -1,5 +1,7 @@
 package com.company.project.web;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
 import com.company.project.core.ServiceException;
@@ -37,6 +39,13 @@ public class HnsiAPIController {
     private Ac11Service ac11Service;
     @Resource
     private Ade4Service ade4Service;
+
+    /**
+     * 缴费登记申请
+     * @param cardno 身份证
+     * @param name 姓名
+     * @return
+     */
     @PostMapping("/insurancereg")
     public Result insurancereg(@RequestParam String cardno,@RequestParam String name) {
         Condition condition=new Condition(Ac01.class);
@@ -98,6 +107,11 @@ public class HnsiAPIController {
         return ResultGenerator.genSuccessResult(ade8);
     }
 
+    /**
+     * 缴费及审核信息查询
+     * @param cardno 身份证
+     * @return
+     */
     @PostMapping("/queryinsurancereg")
     public Result queryinsurancereg(@RequestParam String cardno) {
         Condition condition=new Condition(Ac01.class);
@@ -172,6 +186,12 @@ public class HnsiAPIController {
         return ResultGenerator.genSuccessResult(list);
     }
 
+    /**
+     * 缴费方式选择
+     * @param paymentmethod 缴费方式 12批量 13自主缴费
+     * @param aaz002 queryinsurancereg返回的aaz002
+     * @return
+     */
     @PostMapping("/setPayment")
     public Result setPayment(@RequestParam String paymentmethod,@RequestParam Long aaz002) {
         InsuranceRegDTO dto=new InsuranceRegDTO();
@@ -256,5 +276,56 @@ public class HnsiAPIController {
         return ResultGenerator.genSuccessResult(dto);
     }
 
+    /**
+     * 社保查询统一入口 调用sbcx_sheng中的包体
+     * @param method sbcx_sheng中的方法名 如sbcx_grjbxx
+     * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
+     * @param aae013 他参数的字符串拼接
+     * @param pageno 第几页
+     * @param pagesize 每页大小
+     * @return
+     */
+    @PostMapping("/sbcx")
+    public JSON sbcx(@RequestParam String method, @RequestParam String intext,
+                     @RequestParam String aae013,
+                     @RequestParam Long pageno, @RequestParam Long pagesize) {
+        SBCXDTO dto=new SBCXDTO();
+        dto.setV_intext(intext);
+        dto.setV_aae013(aae013);
+        dto.setV_pageno(pageno);
+        dto.setV_pagesize(pagesize);
+        dto.setV_method(method);
+        hnsiAPIMapper.callSBCX(dto);
+        JSON json=JSON.parseObject(dto.getV_rettext());
+        ((JSONObject) json).put("code","200");
+        ((JSONObject) json).put("message","SUCCESS");
+        return json;
+    }
+
+    /**
+     * 社保查询统一入口 调用sbcx_sheng中的包体
+     * @param method sbcx_sheng中的方法名 如sbcx_grjbxx
+     * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
+     * @param aae013 他参数的字符串拼接
+     * @param pageno 第几页
+     * @param pagesize 每页大小
+     * @return
+     */
+    @PostMapping("/sbcx/{method}")
+    public JSON sbcx2(@PathVariable("method") String method, @RequestParam String intext,
+                      @RequestParam String aae013,
+                     @RequestParam Long pageno, @RequestParam Long pagesize) {
+        SBCXDTO dto=new SBCXDTO();
+        dto.setV_intext(intext);
+        dto.setV_aae013(aae013);
+        dto.setV_pageno(pageno);
+        dto.setV_pagesize(pagesize);
+        dto.setV_method(method);
+        hnsiAPIMapper.callSBCX(dto);
+        JSON json=JSON.parseObject(dto.getV_rettext());
+        ((JSONObject) json).put("code","200");
+        ((JSONObject) json).put("message","SUCCESS");
+        return json;
+    }
 
 }

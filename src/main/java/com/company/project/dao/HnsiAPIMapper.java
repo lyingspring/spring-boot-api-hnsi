@@ -2,6 +2,7 @@ package com.company.project.dao;
 
 import com.company.project.model.Aa10;
 import com.company.project.model.Ac01;
+import com.company.project.model.SBCXDTO;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.mapping.StatementType;
@@ -66,4 +67,13 @@ public interface HnsiAPIMapper {
             "           and eac157 is not null)                                                          "
     )
     public List<HashMap> checkinfo(Ac01 ac01);
+
+
+    /**
+     * 调用存储过程
+     * @param dto
+     */
+    @Select("  call sbcx_sheng.${v_method}(#{v_intext,mode=IN,jdbcType=VARCHAR},#{v_aae013,mode=IN,jdbcType=VARCHAR},#{v_pageno,mode=IN,jdbcType=INTEGER},#{v_pagesize,mode=IN,jdbcType=INTEGER},#{v_rettext,mode=OUT,jdbcType=VARCHAR})")
+    @Options(statementType= StatementType.CALLABLE )
+    public void callSBCX(SBCXDTO dto);
 }
