@@ -104,6 +104,7 @@ public class HnsiAPIController {
         ade8Service.save(ade8);
      //Date date= publicMapper.queryDBdate();
         //System.out.println(date.getYear());
+        ade8.setAae140(publicMapper.getCodeValue("AAE140","25"));
         return ResultGenerator.genSuccessResult(ade8);
     }
 
