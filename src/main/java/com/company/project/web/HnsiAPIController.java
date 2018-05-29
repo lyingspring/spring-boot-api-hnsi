@@ -288,6 +288,37 @@ public class HnsiAPIController {
     }
 
     /**
+     * 查询缴费标准，缴费银行，提示信息等信息
+     * @return
+     */
+    @PostMapping("/querybasicinfo")
+    public Result querybasicinfo() {
+        List<HashMap>list=hnsiAPIMapper.queryAa05();
+        List<Aa05DTO> aa05list=new ArrayList<Aa05DTO>();
+        for(int i=0;i<list.size();i++){
+            Aa05DTO aa05dto=new Aa05DTO();
+            aa05dto.setAaa044(list.get(i).get("AAA044").toString());
+            aa05dto.setAae040(list.get(i).get("AAE040").toString());
+            aa05dto.setEaa007(list.get(i).get("EAA007").toString());
+            aa05list.add(aa05dto) ;
+
+        }
+        PaybankDTO paybankDTO =new PaybankDTO();
+        paybankDTO.setAae008(publicMapper.getCodeValue("APPMSG","aae008"));
+        paybankDTO.setAae009(publicMapper.getCodeValue("APPMSG","aae009"));
+        paybankDTO.setAae010(publicMapper.getCodeValue("APPMSG","aae010"));
+        paybankDTO.setMsg(publicMapper.getCodeValue("APPMSG","bankinfo"));
+        BasicinfoDTO dto=new BasicinfoDTO();
+        dto.setListaa05(aa05list);
+        dto.setPaybankdto(paybankDTO);
+        dto.setAae013(publicMapper.getCodeValue("APPMSG","msg1"));
+        dto.setAae014(publicMapper.getCodeValue("APPMSG","msg2"));
+
+        return ResultGenerator.genSuccessResult(dto);
+    }
+
+
+    /**
      * 社保查询统一入口 调用sbcx_sheng中的包体
      * @param method sbcx_sheng中的方法名 如sbcx_grjbxx
      * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚

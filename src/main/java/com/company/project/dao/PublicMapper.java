@@ -31,7 +31,7 @@ public interface PublicMapper {
     Date queryDBdate();
 
     /**
-     * 获取数据库时间
+     * 获取数据字典
      * @return
      */
     @Select("select sbp_public.f_Get_Codeview(#{aaa100},#{aaa102}) from dual")

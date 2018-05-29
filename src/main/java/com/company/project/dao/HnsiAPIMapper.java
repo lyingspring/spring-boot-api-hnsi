@@ -68,7 +68,20 @@ public interface HnsiAPIMapper {
     )
     public List<HashMap> checkinfo(Ac01 ac01);
 
-
+    /**
+     * 查询居民医疗缴费标准
+     * @return
+     */
+    @Select("select t.aaa044,t.eaa007,t.AAE041||'-'||t.aae042 aae040" +
+            "  from aa05 t," +
+            "       (select max(aae042) aae042, aaz289" +
+            "          from aa05" +
+            "         where aae140 = '25'" +
+            "         group by aaz289) a" +
+            " where aae140 = '25'" +
+            "   and t.aaz289 = a.aaz289" +
+            "   and t.aae042 = a.aae042")
+    public List<HashMap> queryAa05();
     /**
      * 调用存储过程
      * @param dto
