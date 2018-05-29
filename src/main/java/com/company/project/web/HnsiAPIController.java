@@ -44,10 +44,11 @@ public class HnsiAPIController {
      * 缴费登记申请
      * @param cardno 身份证
      * @param name 姓名
+     * @param paymentmethod 缴费方式 12 银行批量待扣 13 银行自主缴费
      * @return
      */
     @PostMapping("/insurancereg")
-    public Result insurancereg(@RequestParam String cardno,@RequestParam String name) {
+    public Result insurancereg(@RequestParam String cardno,@RequestParam String name,@RequestParam String paymentmethod ) {
         Condition condition=new Condition(Ac01.class);
         condition.createCriteria().andCondition("aae135 ='"+cardno+"'");
         List<Ac01> ac01 = ac01Service.findByCondition(condition);
@@ -60,7 +61,7 @@ public class HnsiAPIController {
       }
       Long cbflag=hnsiAPIMapper.countac02ac20(ac01.get(0));
       if(cbflag==0){
-          throw new ServiceException("非续保人员不能录入！");
+          throw new ServiceException("非续保人员不能录入,请到乡镇街道或社保登记！");
       }
 
         Condition conditionag02=new Condition(Ag02.class);
@@ -82,6 +83,14 @@ public class HnsiAPIController {
             throw new ServiceException("人员不符合缴费条件或已经缴费登记");
         }else if(list.get(0).get("AAC031").toString().equals("1")){
             throw new ServiceException("该人员参加职工医保或者土保大病，请核实");
+        }else if(list.get(0).get("AAE010")==null||list.get(0).get("AAE010").toString().length()<3){
+            if(paymentmethod.equals("12")){
+                throw new ServiceException("该人员没有银行账号信息只能选择银行自主缴费！");
+            }
+
+        }
+        if(!paymentmethod.equals("12")&&!paymentmethod.equals("13")){
+            throw new ServiceException("传入的缴费方式编码有误！");
         }
 
         Date date=publicMapper.queryDBdate();
@@ -101,6 +110,7 @@ public class HnsiAPIController {
         ade8.setAae140("25");
         ade8.setAae036(date);
         ade8.setAae016("0");
+        ade8.setAab033(paymentmethod);
         ade8Service.save(ade8);
      //Date date= publicMapper.queryDBdate();
         //System.out.println(date.getYear());
@@ -136,7 +146,7 @@ public class HnsiAPIController {
             dto.setAaz002(ade8l.get(i).getAaz002().intValue());
             dto.setAac003(ade8l.get(i).getAac003());
             dto.setAae135(ade8l.get(i).getAae135());
-            dto.setAae001(ade8l.get(i).getAae001().toString());
+            dto.setAae001(ade8l.get(i).getAae001().toString()+"07-"+(ade8l.get(i).getAae001()+1)+"06");
             dto.setAae140(publicMapper.getCodeValue("AAE140",ade8l.get(i).getAae140()));
             //dto.setAae016(ade8l.get(i).getAae016().equals("1")?"审核通过":ade8l.get(i).getAae016().equals("0")?"未审核":"审核不通过");
             dto.setAae016(ade8l.get(i).getAae016());
@@ -208,7 +218,7 @@ public class HnsiAPIController {
         if(!ade8.getAae016().equals("1")){
             throw new ServiceException("该条信息未审核，操作失败");
         }
-        if(ade8.getEad184().length()==0||ade8.getEad184()==null){
+        if(ade8.getEad184()==null||ade8.getEad184().length()==0){
             throw new ServiceException("找不到对应的审核信息");
         }
         Ade4 ade4=new Ade4();
@@ -226,7 +236,7 @@ public class HnsiAPIController {
         if(ade4.getAab033()!=null&&ade4.getAab033().equals("11")){
             throw new ServiceException("该人员是免缴人员不需要进行操作");
         }
-        if((ade4.getAae010().length()==0||ade4.getAae010()==null)&&paymentmethod.equals("12")){
+        if((ade4.getAae010()==null||ade4.getAae010().length()==0)&&paymentmethod.equals("12")){
             throw new ServiceException("该人员没有银行信息，只能选择银行自主缴费");
         }
         if(!paymentmethod.equals("12")&&!paymentmethod.equals("13")){
