@@ -18,7 +18,18 @@ public class InsuranceRegDTO {
     private String eab009;//镇/街道
     private String eab030;//村/社区
     private String aae001;//年度
+    private String aae002;//缴费年度
     private String ead189;//扣款状态
+
+    public String getAae002() {
+        return aae002;
+    }
+
+    public void setAae002(String aae002) {
+        this.aae002 = aae002;
+    }
+
+
     public String getEad189() {
         return ead189;
     }

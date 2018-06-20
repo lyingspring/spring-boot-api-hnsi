@@ -6,6 +6,7 @@ public class BasicinfoDTO {
     private PaybankDTO paybankdto;
     private List<Aa05DTO> listaa05;
     private String aae013;
+    private String aae014;
 
     public PaybankDTO getPaybankdto() {
         return paybankdto;
@@ -39,5 +40,5 @@ public class BasicinfoDTO {
         this.aae014 = aae014;
     }
 
-    private String aae014;
+
 }

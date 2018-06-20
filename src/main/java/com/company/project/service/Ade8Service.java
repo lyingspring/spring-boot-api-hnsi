@@ -4,7 +4,7 @@ import com.company.project.core.Service;
 
 
 /**
- * Created by CodeGenerator on 2018/05/15.
+ * Created by CodeGenerator on 2018/06/06.
  */
 public interface Ade8Service extends Service<Ade8> {
 

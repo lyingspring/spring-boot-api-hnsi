@@ -19,5 +19,8 @@
     <result column="AAE016" jdbcType="VARCHAR" property="aae016" />
     <result column="AAE013" jdbcType="VARCHAR" property="aae013" />
     <result column="AAE037" jdbcType="TIMESTAMP" property="aae037" />
+    <result column="PRSENO" jdbcType="DECIMAL" property="prseno" />
+    <result column="EAB009" jdbcType="VARCHAR" property="eab009" />
+    <result column="EAB030" jdbcType="VARCHAR" property="eab030" />
   </resultMap>
 </mapper>

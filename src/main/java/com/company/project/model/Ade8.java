@@ -47,6 +47,15 @@ public class Ade8 {
     @Column(name = "AAE037")
     private Date aae037;
 
+    @Column(name = "PRSENO")
+    private Long prseno;
+
+    @Column(name = "EAB009")
+    private String eab009;
+
+    @Column(name = "EAB030")
+    private String eab030;
+
     /**
      * @return AAZ002
      */
@@ -241,5 +250,47 @@ public class Ade8 {
      */
     public void setAae037(Date aae037) {
         this.aae037 = aae037;
+    }
+
+    /**
+     * @return PRSENO
+     */
+    public Long getPrseno() {
+        return prseno;
+    }
+
+    /**
+     * @param prseno
+     */
+    public void setPrseno(Long prseno) {
+        this.prseno = prseno;
+    }
+
+    /**
+     * @return EAB009
+     */
+    public String getEab009() {
+        return eab009;
+    }
+
+    /**
+     * @param eab009
+     */
+    public void setEab009(String eab009) {
+        this.eab009 = eab009;
+    }
+
+    /**
+     * @return EAB030
+     */
+    public String getEab030() {
+        return eab030;
+    }
+
+    /**
+     * @param eab030
+     */
+    public void setEab030(String eab030) {
+        this.eab030 = eab030;
     }
 }

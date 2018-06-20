@@ -86,7 +86,7 @@ public interface HnsiAPIMapper {
      * 调用存储过程
      * @param dto
      */
-    @Select("  call sbcx_sheng.${v_method}(#{v_intext,mode=IN,jdbcType=VARCHAR},#{v_aae013,mode=IN,jdbcType=VARCHAR},#{v_pageno,mode=IN,jdbcType=INTEGER},#{v_pagesize,mode=IN,jdbcType=INTEGER},#{v_rettext,mode=OUT,jdbcType=VARCHAR})")
+    @Select("  call SBP_APP.${v_method}(#{v_intext,mode=IN,jdbcType=VARCHAR},#{v_aae013,mode=IN,jdbcType=VARCHAR},#{v_pageno,mode=IN,jdbcType=INTEGER},#{v_pagesize,mode=IN,jdbcType=INTEGER},#{v_rettext,mode=OUT,jdbcType=VARCHAR})")
     @Options(statementType= StatementType.CALLABLE )
     public void callSBCX(SBCXDTO dto);
 }

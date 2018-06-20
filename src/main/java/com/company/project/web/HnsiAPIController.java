@@ -48,7 +48,9 @@ public class HnsiAPIController {
      * @return
      */
     @PostMapping("/insurancereg")
-    public Result insurancereg(@RequestParam String cardno,@RequestParam String name,@RequestParam String paymentmethod ) {
+    public Result insurancereg(@RequestParam String cardno,@RequestParam String name,
+                               @RequestParam String paymentmethod,
+                               @RequestParam String eab009,@RequestParam String eab030 ) {
         Condition condition=new Condition(Ac01.class);
         condition.createCriteria().andCondition("aae135 ='"+cardno+"'");
         List<Ac01> ac01 = ac01Service.findByCondition(condition);
@@ -88,7 +90,15 @@ public class HnsiAPIController {
                 throw new ServiceException("该人员没有银行账号信息只能选择银行自主缴费！");
             }
 
+        }else if(paymentmethod.equals("12")&&list.get(0).get("AAE010")!=null&&
+                !list.get(0).get("AAE010").toString().substring(0,6).equals("623091")){
+
+            throw new ServiceException("该人员银行账号非农商银行只能选择银行自主缴费！");
+        }else if(list.get(0).get("EAB030")!=null&&
+                publicMapper.getCodeValue("EAB030",list.get(0).get("EAB030").toString()) .contains("新居民")){
+            throw new ServiceException("新居民请到乡镇街道进行缴费！");
         }
+        //System.out.println(list.get(0).get("AAE010").toString().substring(0,6));
         if(!paymentmethod.equals("12")&&!paymentmethod.equals("13")){
             throw new ServiceException("传入的缴费方式编码有误！");
         }
@@ -111,10 +121,14 @@ public class HnsiAPIController {
         ade8.setAae036(date);
         ade8.setAae016("0");
         ade8.setAab033(paymentmethod);
+        ade8.setEab009(eab009);
+        ade8.setEab030(eab030);
         ade8Service.save(ade8);
      //Date date= publicMapper.queryDBdate();
         //System.out.println(date.getYear());
         ade8.setAae140(publicMapper.getCodeValue("AAE140","25"));
+        ade8.setEab009(publicMapper.getCodeValue("EAB009",eab009));
+        ade8.setEab030(publicMapper.getCodeValue("EAB030",eab030));
         return ResultGenerator.genSuccessResult(ade8);
     }
 
@@ -135,6 +149,7 @@ public class HnsiAPIController {
         }
         Condition conditionade8=new Condition(Ade8.class);
         conditionade8.createCriteria().andCondition("aac001 ='"+ac01.get(0).getAac001()+"' and aae140='25' and aae003=to_char(sysdate,'yyyy')||'07'");
+        conditionade8.orderBy("aae036").desc();//排序
         List<Ade8> ade8l = ade8Service.findByCondition(conditionade8);
         if(ade8l.size()==0){
             throw new ServiceException("找不到登记信息，请先缴费登记");
@@ -152,6 +167,10 @@ public class HnsiAPIController {
             dto.setAae016(ade8l.get(i).getAae016());
             dto.setAae013(ade8l.get(i).getAae013());
             dto.setEad184(ade8l.get(i).getEad184());
+            dto.setAab033(ade8l.get(i).getAab033());
+            dto.setAae002(ade8l.get(i).getAae002().toString());
+            dto.setEab009(publicMapper.getCodeValue("EAB009",ade8l.get(i).getEab009()==null?"无":ade8l.get(i).getEab009()));
+            dto.setEab030(publicMapper.getCodeValue("EAB030",ade8l.get(i).getEab030()==null?"无":ade8l.get(i).getEab030()));
             SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//yyyy-MM-dd HH:mm:ss
             String aae036 = format0.format(ade8l.get(i).getAae036());//这个就是把时间戳经过处理得到期望格式的时间
             dto.setAae036(aae036);
@@ -179,8 +198,8 @@ public class HnsiAPIController {
                     dto.setAae037(aae037);
                     dto.setAab033(ade4.getAab033());
                     dto.setEad186(ade4.getEad186().doubleValue());
-                    dto.setEab009(publicMapper.getCodeValue("EAB009",ade4.getEab009()));
-                    dto.setEab030(publicMapper.getCodeValue("EAB030",ade4.getEab030()));
+                    //dto.setEab009(publicMapper.getCodeValue("EAB009",ade4.getEab009()));
+                    //dto.setEab030(publicMapper.getCodeValue("EAB030",ade4.getEab030()));
                     dto.setEad189(publicMapper.getCodeValue("EAD189",ade4.getEad189()));
                     dto.setAae010(ade4.getAae010());
                     dto.setAaa082(ade4.getAaa082());
@@ -206,6 +225,12 @@ public class HnsiAPIController {
     @PostMapping("/setPayment")
     public Result setPayment(@RequestParam String paymentmethod,@RequestParam Long aaz002) {
         InsuranceRegDTO dto=new InsuranceRegDTO();
+        Date date=publicMapper.queryDBdate();
+        SimpleDateFormat formatym = new SimpleDateFormat("MMdd");//yyyy-MM-dd HH:mm:ss
+        String ym = formatym.format(date);//这个就是把时间戳经过处理得到期望格式的时间
+        if(Long.valueOf(ym)>=627){//6月27号后
+            throw new ServiceException("6月27号后不允许缴费方式变更！");
+        }
         Ade8 ade8=new Ade8();
         try {
             ade8=   ade8Service.findBy("aaz002",aaz002);
@@ -242,9 +267,14 @@ public class HnsiAPIController {
         if(!paymentmethod.equals("12")&&!paymentmethod.equals("13")){
             throw new ServiceException("传入的缴费方式代码有误");
         }
+        if(paymentmethod.equals("12")&&ade4.getAae010()!=null&&
+                !ade4.getAae010().substring(0,6).equals("623091")){
+
+            throw new ServiceException("该人员银行账号非农商银行只能选择银行自主缴费！");
+        }
 
 
-        Date date=publicMapper.queryDBdate();
+
         ade8.setAab033(paymentmethod);
         ade8.setAae037(date);
         ade8Service.update(ade8);
@@ -319,8 +349,8 @@ public class HnsiAPIController {
 
 
     /**
-     * 社保查询统一入口 调用sbcx_sheng中的包体
-     * @param method sbcx_sheng中的方法名 如sbcx_grjbxx
+     * 社保查询统一入口 调用SBP_APP中的包体
+     * @param method SBP_APP中的方法名 如sbcx_grjbxx
      * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
      * @param aae013 他参数的字符串拼接
      * @param pageno 第几页
@@ -345,8 +375,8 @@ public class HnsiAPIController {
     }
 
     /**
-     * 社保查询统一入口 调用sbcx_sheng中的包体
-     * @param method sbcx_sheng中的方法名 如sbcx_grjbxx
+     * 社保查询统一入口 调用SBP_APP中的包体
+     * @param method SBP_APP中的方法名 如sbcx_grjbxx
      * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
      * @param aae013 他参数的字符串拼接
      * @param pageno 第几页
@@ -367,6 +397,46 @@ public class HnsiAPIController {
         JSON json=JSON.parseObject(dto.getV_rettext());
         ((JSONObject) json).put("code","200");
         ((JSONObject) json).put("message","SUCCESS");
+        return json;
+    }
+
+    /**
+     *  调用SBP_APP中的包体
+     * @param method SBP_APP中的方法名 如sbcx_grjbxx
+     * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
+     * @param aae013 他参数的字符串拼接
+     * @param pageno 第几页
+     * @param pagesize 每页大小
+     * @return
+     */
+    @PostMapping("/sbpapp/{method}")
+    public JSON sbpapp(@PathVariable("method") String method, @RequestParam String intext,
+                      @RequestParam String aae013,
+                      @RequestParam Long pageno, @RequestParam Long pagesize) {
+        SBCXDTO dto=new SBCXDTO();
+        dto.setV_intext(intext);
+        dto.setV_aae013(aae013);
+        dto.setV_pageno(pageno);
+        dto.setV_pagesize(pagesize);
+        dto.setV_method(method);
+        hnsiAPIMapper.callSBCX(dto);
+        JSON json=JSON.parseObject(dto.getV_rettext());
+        ((JSONObject) json).put("code","200");
+        ((JSONObject) json).put("message","SUCCESS");
+
+        if(((JSONObject) json).getString("Ri_Ret")!=null){
+            if(!((JSONObject) json).getString("Ri_Ret").equals("0")){
+                ((JSONObject) json).put("code","400");
+                //((JSONObject) json).remove("Ri_Ret");
+                if(((JSONObject) json).getString("Rv_Msg")!=null){
+                    ((JSONObject) json).put("message",((JSONObject) json).getString("Rv_Msg"));
+                    //((JSONObject) json).remove("Rv_Msg");
+                }
+
+            }
+
+
+        }
         return json;
     }
 

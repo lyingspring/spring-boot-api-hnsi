@@ -1,209 +1,11 @@
-POST http://localhost:8080/hnsiapi/setPayment
+POST http://localhost:8080/hnsiapi/queryinsurancereg
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-aaz002=108503795&paymentmethod=13
+name=孙欢&cardno=330481198010020017&paymentmethod=13
 
-<> 2018-05-16T122108.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=13
-
-<> 2018-05-16T122105.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=13
-
-<> 2018-05-15T023151.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment1
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=13
-
-<> 2018-05-15T022337.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=13
-
-<> 2018-05-15T014753.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=13
-
-<> 2018-05-15T014310.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=12
-
-<> 2018-05-15T014132.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=12
-
-<> 2018-05-15T014048.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=12
-
-<> 2018-05-15T014046.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T014037.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T014016.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T013505.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T013331.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T012921.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T012816.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T012814.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T012731.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503795&paymentmethod=11
-
-<> 2018-05-15T012537.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/setPayment
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-aaz002=108503796&paymentmethod=11
-
-<> 2018-05-15T012446.200.json
+<> 2018-05-29T055143.200.json
 
 ###
 
@@ -212,9 +14,42 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+name=孙欢&cardno=330481198010020017&paymentmethod=13
 
-<> 2018-05-15T125038.200.json
+<> 2018-05-29T054908.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/insurancereg
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+name=孙欢&cardno=330481198010020017&paymentmethod=13
+
+<> 2018-05-29T054751.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/insurancereg
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+name=孙欢&cardno=330481198010020017&paymentmethod=12
+
+<> 2018-05-29T054732.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/insurancereg
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+name=孙欢&cardno=330481198010020017
+
+<> 2018-05-29T053850.200.json
 
 ###
 
@@ -223,20 +58,9 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+name=孙欢&cardno=330481198010020017
 
-<> 2018-05-15T124802.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/queryinsurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T124639.200.json
+<> 2018-05-29T053827.200.json
 
 ###
 
@@ -245,20 +69,9 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198010020017&name=孙欢
 
-<> 2018-05-15T124022.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/queryinsurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T123925.200.json
+<> 2018-05-29T053713.200.json
 
 ###
 
@@ -267,20 +80,9 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198010020017&paymentmethod=13&name=孙欢
 
-<> 2018-05-15T123715.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/queryinsurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T123543.200.json
+<> 2018-05-29T053646.200.json
 
 ###
 
@@ -289,20 +91,9 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T123409.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/queryinsurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T120328.200.json
+<> 2018-05-29T052645.200.json
 
 ###
 
@@ -311,20 +102,9 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T114406.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/queryinsurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T114013.200.json
+<> 2018-05-29T052609.200.json
 
 ###
 
@@ -333,20 +113,9 @@ POST http://localhost:8080/hnsiapi/queryinsurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T113819.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/queryinsurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T113719.200.json
+<> 2018-05-29T052453.200.json
 
 ###
 
@@ -355,20 +124,9 @@ POST http://localhost:8080/hnsiapi/insurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T023417.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/insurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T023358.200.json
+<> 2018-05-29T052417.200.json
 
 ###
 
@@ -377,20 +135,9 @@ POST http://localhost:8080/hnsiapi/insurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T023310.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/insurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T023201.200.json
+<> 2018-05-29T052224.200.json
 
 ###
 
@@ -399,20 +146,9 @@ POST http://localhost:8080/hnsiapi/insurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T021352.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/insurancereg
-:
-Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-
-name=徐洛馨&cardno=330481201608112105
-
-<> 2018-05-15T020938.200.json
+<> 2018-05-29T052222.200.json
 
 ###
 
@@ -421,124 +157,394 @@ POST http://localhost:8080/hnsiapi/insurancereg
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+cardno=330481198001152819&paymentmethod=13&name=顾晓杰
 
-<> 2018-05-15T020731.200.json
+<> 2018-05-29T051959.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://localhost:8080/hnsiapi/setPayment
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+aaz002=108503891&paymentmethod=13
 
-<> 2018-05-15T020543.200.json
+<> 2018-05-29T044739.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://localhost:8080/hnsiapi/setPayment
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+aaz002=108503891&paymentmethod=13
+
+<> 2018-05-29T044523.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://localhost:8080/hnsiapi/setPayment
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+aaz002=108503891&paymentmethod=13
 
-<> 2018-05-15T015251.200.json
+<> 2018-05-29T044417.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://localhost:8080/hnsiapi/setPayment
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+aaz002=108503891&paymentmethod=13
 
-<> 2018-05-15T015026.200.json
+<> 2018-05-29T044309.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://10.80.87.68:8080/hnsiapi/setPayment
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+aaz002=108503891&paymentmethod=13
 
-<> 2018-05-15T010227.200.json
+<> 2018-05-29T044207.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://10.80.87.68:8080/hnsiapi/setPayment
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+aaz002=108503891&paymentmethod=13
 
-<> 2018-05-15T125601.200.json
+<> 2018-05-29T044100.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://10.80.87.68:8080/hnsiapi/sbcx/sbcx_grjbxx
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=徐洛馨&cardno=330481201608112105
+intext=330481199308132446-倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
 
-<> 2018-05-14T115017.200.json
+<> 2018-05-28T020157.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://10.80.87.68:8080/hnsiapi/sbcx/sbcx_grjbxx
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=倪梦岚&cardno=330481201608112105
+intext=330481199308132446-倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
 
-<> 2018-05-14T115006.200.json
+<> 2018-05-24T025331.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://10.80.87.68:8080/hnsiapi/sbcx/sbcx_grjbxx
 :
 Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=倪梦岚&cardno=330481199308132446
+intext=330481199308132446-倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
 
-<> 2018-05-14T114654.200.json
-
-###
-
-POST http://localhost:8080/hnsiapi/insurancereg
-:
-
-name=倪梦岚&cardno=330481199308132446
-
-<> 2018-05-14T105234.200.json
+<> 2018-05-24T025325.200.json
 
 ###
 
-POST http://localhost:8080/hnsiapi/insurancereg
+POST http://10.80.87.68:8080/hnsiapi/sbcx/sbcx_grjbxx
 :
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 
-name=倪梦岚&cardno=330481199308132446
+intext=330481199308132446-倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
 
-<> 2018-05-14T105232.200.json
+<> 2018-05-24T025318.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+intext=330481199308132446-倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-24T024749.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+intext=330481199308132446-倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-24T024637.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T072832.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T072652.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/SBCX_yljf
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=1&pagesize=30&aae013=
+
+<> 2018-05-22T072409.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/SBCX_yljf
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=1&pagesize=30&aae013=
+
+<> 2018-05-22T072404.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/SBCX_yljf
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=1&pagesize=30&aae013=
+
+<> 2018-05-22T072131.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/SBCX_yljf
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=2&pagesize=6&aae013=
+
+<> 2018-05-22T072101.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/SBCX_yljf
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=1&pagesize=24&aae013=
+
+<> 2018-05-22T072019.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/SBCX_yljf
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071948.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=钱建国&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071910.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330419196804034018&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071856.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071720.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071442.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071439.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T071437.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx/sbcx_grjbxx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T070903.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T050658.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132441&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T050559.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T050549.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132445&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T050537.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx1&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T050434.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T050343.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T045311.200.json
+
+###
+
+POST http://localhost:8080/hnsiapi/sbcx
+:
+Accept: application/json,application/xml,application/xhtml+xml,text/html,text/xml,text/plain
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+aae135=330481199308132446&aac003=倪梦岚&method=sbcx_grjbxx&pageno=1&pagesize=1&aae013=
+
+<> 2018-05-22T045033.200.json
 
 ###
 
