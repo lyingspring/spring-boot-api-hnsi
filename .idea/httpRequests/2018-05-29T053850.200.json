@@ -1,4 +1,0 @@
-{
-  "code": 400,
-  "message": "Required String parameter 'paymentmethod' is not present"
-}

@@ -22,6 +22,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * author maoxj
+ */
 @RestController
 @RequestMapping("/hnsiapi")
 public class HnsiAPIController {
@@ -40,7 +43,7 @@ public class HnsiAPIController {
     @Resource
     private Ade4Service ade4Service;
 
-    /**
+    /**author maoxj
      * 缴费登记申请
      * @param cardno 身份证
      * @param name 姓名
@@ -132,7 +135,7 @@ public class HnsiAPIController {
         return ResultGenerator.genSuccessResult(ade8);
     }
 
-    /**
+    /**author maoxj
      * 缴费及审核信息查询
      * @param cardno 身份证
      * @return
@@ -216,7 +219,7 @@ public class HnsiAPIController {
         return ResultGenerator.genSuccessResult(list);
     }
 
-    /**
+    /**author maoxj
      * 缴费方式选择
      * @param paymentmethod 缴费方式 12批量 13自主缴费
      * @param aaz002 queryinsurancereg返回的aaz002
@@ -317,7 +320,7 @@ public class HnsiAPIController {
         return ResultGenerator.genSuccessResult(dto);
     }
 
-    /**
+    /**author maoxj
      * 查询缴费标准，缴费银行，提示信息等信息
      * @return
      */
@@ -348,7 +351,7 @@ public class HnsiAPIController {
     }
 
 
-    /**
+    /**author maoxj
      * 社保查询统一入口 调用SBP_APP中的包体
      * @param method SBP_APP中的方法名 如sbcx_grjbxx
      * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
@@ -374,7 +377,7 @@ public class HnsiAPIController {
         return json;
     }
 
-    /**
+    /**author maoxj
      * 社保查询统一入口 调用SBP_APP中的包体
      * @param method SBP_APP中的方法名 如sbcx_grjbxx
      * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚
@@ -400,7 +403,7 @@ public class HnsiAPIController {
         return json;
     }
 
-    /**
+    /**author maoxj
      *  调用SBP_APP中的包体
      * @param method SBP_APP中的方法名 如sbcx_grjbxx
      * @param intext 传入参数 一般为身份证号码-姓名 比如 330481199308132446-倪梦岚

@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * author maoxj
+ */
 public interface PublicMapper {
     /**
      * 获取序列号
